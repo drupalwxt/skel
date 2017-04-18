@@ -1,0 +1,10 @@
+services:
+  skel.extender:
+    class: '\Drupal\skel\Extender'
+    arguments:
+      - '@app.root'
+      - '@site.path'
+  skel.form_helper:
+    class: '\Drupal\skel\FormHelper'
+    arguments:
+      - '@element_info'

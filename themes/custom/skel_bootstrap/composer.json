@@ -1,0 +1,6 @@
+{
+    "name": "drupal/skel_bootstrap",
+    "description": "Skeleton Bootstrap sub-theme for Drupal WxT.",
+    "type": "drupal-theme",
+    "license": "GPL-2.0+"
+}

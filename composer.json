@@ -1,0 +1,198 @@
+{
+    "name": "drupalwxt/skel",
+    "description": "Installation profile skeleton template for Drupal 8 sites built with the WxT distribution.",
+    "type": "drupal-profile",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "composer/installers": "^1.0",
+        "cweagans/composer-patches": "^1.5.0",
+        "drupal-composer/drupal-scaffold": "^2.0.0",
+        "drupalwxt/wxt": "dev-8.x-2.x",
+        "harvesthq/chosen": "1.5.1"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "harvesthq/chosen",
+                "version" : "v1.5.1",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/harvesthq/chosen-package/archive/v1.5.1.tar.gz",
+                    "type" : "tar"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/harvesthq/chosen-package.git",
+                    "type"      : "git",
+                    "reference" : "v1.5.1"
+                }
+            }
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "wet-boew/wet-boew",
+                "version" : "v4.0.24",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/wet-boew/wet-boew-cdn/archive/v4.0.24.tar.gz",
+                    "type" : "tar"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/wet-boew/wet-boew-cdn.git",
+                    "type"      : "git",
+                    "reference" : "v4.0.24"
+                }
+            }
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "wet-boew/theme-wet-boew",
+                "version" : "v4.0.24",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/wet-boew/themes-cdn/archive/v4.0.24-theme-wet-boew.tar.gz",
+                    "type" : "tar"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/wet-boew/themes-cdn.git",
+                    "type"      : "git",
+                    "reference" : "v4.0.24-theme-wet-boew"
+                }
+            }
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "wet-boew/theme-base",
+                "version" : "v4.0.24",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/wet-boew/themes-cdn/archive/v4.0.24-theme-base.tar.gz",
+                    "type" : "tar"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/wet-boew/themes-cdn.git",
+                    "type"      : "git",
+                    "reference" : "v4.0.24-theme-base"
+                }
+            }
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "wet-boew/theme-gc-intranet",
+                "version" : "v4.0.24",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/wet-boew/themes-cdn/archive/v4.0.24-theme-gc-intranet.tar.gz",
+                    "type" : "tar"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/wet-boew/themes-cdn.git",
+                    "type"      : "git",
+                    "reference" : "v4.0.24-theme-gc-intranet"
+                }
+            }
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "wet-boew/theme-gcwu-fegc",
+                "version" : "v4.0.24",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/wet-boew/themes-cdn/archive/v4.0.24-theme-gcwu-fegc.tar.gz",
+                    "type" : "tar"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/wet-boew/themes-cdn.git",
+                    "type"      : "git",
+                    "reference" : "v4.0.24-theme-gcwu-fegc"
+                }
+            }
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "wet-boew/theme-gcweb",
+                "version" : "v4.0.24",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/wet-boew/themes-cdn/archive/v4.0.24-gcweb.tar.gz",
+                    "type" : "tar"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/wet-boew/themes-cdn.git",
+                    "type"      : "git",
+                    "reference" : "v4.0.24-gcweb"
+                }
+            }
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "wet-boew/theme-ogpl",
+                "version" : "v4.0.24",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/wet-boew/themes-cdn/archive/v4.0.24-theme-ogpl.tar.gz",
+                    "type" : "tar"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/wet-boew/themes-cdn.git",
+                    "type"      : "git",
+                    "reference" : "v4.0.24-theme-ogpl"
+                }
+            }
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "@composer drupal-scaffold"
+        ],
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    },
+    "extra": {
+        "installer-paths": {
+            "html/core": [
+                "type:drupal-core"
+            ],
+            "html/libraries/{$name}" : [
+                "type:drupal-library"
+            ],
+            "html/modules/custom/{$name}": [
+                "drupal/wxt_library"
+            ],
+            "html/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "html/profiles/{$name}": [
+                "type:drupal-profile"
+            ],
+            "html/themes/custom/{$name}": [
+                "drupal/wxt_bootstrap"
+            ],
+            "html/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/chosen": {
+                "Enter drupal/chosen patch #2706433 description here":
+                "https://www.drupal.org/files/issues/composer_dist_problem-2706433-28.patch"
+            }
+        }
+    }
+}

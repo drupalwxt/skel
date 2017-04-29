@@ -5,7 +5,6 @@
  * Contains skel.profile.
  */
 
-use Drupal\skel\Form\ExtensionSelectForm;
 use Symfony\Component\Yaml\Parser;
 
 /**
@@ -13,12 +12,6 @@ use Symfony\Component\Yaml\Parser;
  */
 function skel_install_tasks() {
   return [
-    'skel_select_extensions' => [
-      'display_name' => t('Choose extensions'),
-      'display' => TRUE,
-      'type' => 'form',
-      'function' => ExtensionSelectForm::class,
-    ],
     'skel_install_extensions' => [
       'display_name' => t('Install extensions'),
       'display' => TRUE,
@@ -43,7 +36,7 @@ function skel_install_tasks_alter(array &$tasks, array $install_state) {
 }
 
 /**
- * Install task callback; prepares a batch job to install Skeleton extensions.
+ * Install task callback; prepares a batch job to install Skel extensions.
  *
  * @param array $install_state
  *   The current install state.
@@ -53,7 +46,10 @@ function skel_install_tasks_alter(array &$tasks, array $install_state) {
  */
 function skel_install_extensions(array &$install_state) {
   $batch = [];
-  foreach ($install_state['skel']['modules'] as $module) {
+  $modules = [
+    'skel_ext',
+  ];
+  foreach ($modules as $module) {
     $batch['operations'][] = ['skel_install_module', (array) $module];
   }
   return $batch;

@@ -1,9 +1,0 @@
-name: 'Skeleton Test'
-description: 'Tests common / extended functionality for Skeleton.'
-type: module
-core: 8.x
-package: 'Skeleton'
-
-# Required modules
-dependencies:
-  - drupal:skel_core

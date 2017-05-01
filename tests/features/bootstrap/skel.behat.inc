@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \OpenDataSubContext.
+ * Contains \SkelSubContext.
  */
 
 use Behat\Behat\Hook\Scope\BeforeScenarioScope;
@@ -14,9 +14,9 @@ use Behat\Mink\Exception\UnsupportedDriverActionException;
 use Drupal\DrupalExtension\Context\DrupalSubContextBase;
 
 /**
- * Sub context for Skeleton step definitions.
+ * Sub context for Skel step definitions.
  */
-class OpenDataSubContext extends DrupalSubContextBase {
+class SkelSubContext extends DrupalSubContextBase {
 
   /**
    * The Mink context.

@@ -1,13 +1,14 @@
-@od @api
-Feature: Skeleton Content Types
+@skel @core @api
+Feature: Skel Content Types
   Makes sure that the article content type was created during installation.
 
-  Scenario: Make sure that the content types provided by Skeleton at installation are present.
+  @page @landing-page
+  Scenario: Make sure that the content types provided by Skel at installation are present.
     Given I am logged in as a user with the administrator role
     When I visit "/node/add"
     Then I should see "Basic page"
 
-  @javascript
+  @page @javascript
   Scenario: Ensure that the WYSIWYG editor is present.
     Given I am logged in as a user with the administrator role
     When I visit "node/add/page"
